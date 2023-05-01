@@ -1,11 +1,5 @@
-.app {
-  padding-left: 0%;
-  padding-right: 0%;
-}
-
-/* // TEMPLATE STUFF */
-.screen {
-  /* background-color: blue; */
+/* .screen {
+  background-color: blue;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -14,13 +8,13 @@
 }
 
 .main {
-  /* background-color: red; */
+  background-color: red;
   height: 75vh;
   width: 75rem;
 }
 
 .title-row {
-  /* background-color: aquamarine; */
+  background-color: aquamarine;
   height: 7rem;
 }
 
@@ -39,7 +33,17 @@ background-color: bisque;
 
 #right {
   background-color: blueviolet;
-}
+} */
+
+
+
+
+
+
+
+
+
+
 
 /* Small devices (landscape phones, 576px and up) */
 /* @media (min-width: 576px) { 

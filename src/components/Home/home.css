@@ -1,0 +1,16 @@
+#home-title {
+  background-color: purple;
+  height: 75%;
+}
+
+#home-buttons {
+  height: 25%;
+}
+
+#home-title-text {
+  font-size: 4.5rem;
+  /* width: 45rem;
+  position: relative;
+  top: 16rem;
+  left: 1rem; */
+}
