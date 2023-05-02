@@ -8,7 +8,7 @@
   --title-font-family: 'Quattrocento', serif;;
   --title-font-size: 4rem;
   --text-font-family: 'Questrial', sans-serif;
-  --text-font-size: 1.2rem;
+  --text-font-size: 1.1rem;
   --text-color: #F8F8F6;
   --blue: #0C236E;
   --light-blue: #3F5086;
@@ -20,7 +20,12 @@
 }
 
 h1, h2, h3 {
+  font-size: var(--title-font-size);
   font-family: var(--title-font-family);
   font-weight: bold;
   letter-spacing: -3px;
+}
+
+hr {
+  color: pink;
 }

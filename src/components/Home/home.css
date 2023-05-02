@@ -9,14 +9,20 @@
 }
 
 .main {
+  /* background-color: aqua; */
   height: 75vh;
-  width: 75rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .body {
   height: 75vh;
+  width: 75rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .body-col {
@@ -28,23 +34,24 @@
 
 /* Welcome and About */
 
-#welcome-text {
-  font-size: 7rem;
+/* #name {
+  font-size: var(--title-font-size);
+  text-align: center;
 }
 
 #about-text {
-  font-size: 1.1rem;
+  font-size: var(--text-font-size);
 }
 
 .about-col {
   border-right: 1px solid white;
-}
+} */
 
 /* Projects Listed */
 
 #projects-title {
   font-size: 4rem;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
   text-align: center;
 }
 
@@ -53,6 +60,7 @@
 } */
 
 li {
+  font-size: var(--text-font-size);
   list-style: none;
   margin-bottom: 10px;
   text-align: center;
