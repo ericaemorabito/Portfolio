@@ -1,61 +1,26 @@
+* {
+  font-family: serif;
+  font-family: var(--text-font-family);
+  color: var(--text-color);
+}
+
+:root {
+  --title-font-family: 'Quattrocento', serif;;
+  --title-font-size: 4rem;
+  --text-font-family: 'Questrial', sans-serif;
+  --text-font-size: 1.2rem;
+  --text-color: #F8F8F6;
+  --blue: #0C236E;
+  --light-blue: #3F5086;
+}
+
 .app {
   padding-left: 0%;
   padding-right: 0%;
 }
 
-/* // TEMPLATE STUFF */
-.screen {
-  /* background-color: blue; */
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+h1, h2, h3 {
+  font-family: var(--title-font-family);
+  font-weight: bold;
+  letter-spacing: -3px;
 }
-
-.main {
-  /* background-color: red; */
-  height: 75vh;
-  width: 75rem;
-}
-
-.title-row {
-  /* background-color: aquamarine; */
-  height: 7rem;
-}
-
-.body-row {
-  background-color: green;
-  height: 35rem;
-}
-
-.body-col {
-  background-color: aliceblue;
-}
-
-#left {
-background-color: bisque;
-}
-
-#right {
-  background-color: blueviolet;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-/* @media (min-width: 576px) { 
-
- } */
-
- /* Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px) { 
-
-} */
-
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) { ... } */
-
- /* X-Large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) { ... } */
-
-/*  XX-Large devices (larger desktops, 1400px and up) */
-/* @media (min-width: 1400px) { ... } */
