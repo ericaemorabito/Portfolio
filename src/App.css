@@ -19,11 +19,12 @@
   padding-right: 0%;
 }
 
-h1, h2, h3 {
+h1, 
+h2 {
   font-size: var(--title-font-size);
   font-family: var(--title-font-family);
   font-weight: bold;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
 }
 
 hr {

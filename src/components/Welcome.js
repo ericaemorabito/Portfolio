@@ -1,6 +1,6 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import './welcome.css'
+import '../styles/welcome.css'
 
 const Welcome = () => {
   return (

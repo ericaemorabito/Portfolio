@@ -1,7 +1,7 @@
 import "./App.css";
 import { Container } from "react-bootstrap";
-import Header from './components/Header/Header'
-import Home from "./components/Home/Home";
+import Header from './components/Header'
+import Home from "./components/Home";
 
 function App() {
   return (

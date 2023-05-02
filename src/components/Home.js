@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import "./home.css";
-import Project from '../Project/Project'
-import Welcome from "../Welcome/Welcome";
+import "../styles/home.css";
+import Project from './Project'
+import Welcome from "./Welcome";
 
 const Home = () => {
   const [project, setProject] = useState("home");
 
   const handleHome = () => {
-    console.log("home");
+    setProject('home');
+    console.log("state is home");
   };
 
   const handleFirstProject = () => {
@@ -32,6 +33,7 @@ const Home = () => {
   };
 
   let text;
+
   if (project === 'home'){
     text = <Welcome />
   } 
@@ -53,7 +55,7 @@ const Home = () => {
           {/* WELCOME & PROJECT TEXT AREA*/}
           <Col lg={6} md={12} sm={12} xs={12} className="body-col about-col">
             {text}
-            
+            {/* <Project /> */}
           </Col>
 
           {/* PROJECTS LISTED */}
