@@ -1,0 +1,39 @@
+#about-card {
+  height: 26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#welcome-text {
+  font-size: var(--title-font-size);
+  text-align: center;
+}
+
+.about-text-area {
+  background-color: var(--light-blue);
+}
+
+#about-text {
+  font-size: var(--text-font-size);
+  margin: 1rem;
+}
+
+.tech-logos-area {
+  /* background-color: aqua; */
+  height: 2.5rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-list-item {
+  display: inline;
+  margin: 1rem;
+}
+
+.tech-logo {
+  width: 2.5rem;
+}
+
+

@@ -32,6 +32,10 @@
   justify-content: center;
 }
 
+.about-col {
+  border-right: 1px solid white;
+}
+
 /* Welcome and About */
 
 /* #name {
