@@ -6,7 +6,7 @@ import Home from "./components/Home";
 function App() {
   return (
     <Container fluid className="app gx-0">
-      <Header />
+      {/* <Header /> */}
       <Home />
     </Container>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../styles/project.css";
 import link from "../icons/link-w.svg";
 import github from "../icons/github-w.svg";
@@ -57,9 +57,6 @@ const Project = ({ project }) => {
             alt="github cat icon"
           ></img>
         </button>
-      </div>
-      <div className="back-area">
-        <button className="back-btn" onClick={() => {console.log('back btn')}}>Back</button>
       </div>
     </motion.div>
   );

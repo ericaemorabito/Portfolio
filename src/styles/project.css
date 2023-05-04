@@ -7,15 +7,19 @@
 }
 
 .project-description-area {
-  background-color: var(--light-blue);
-  height: 5rem;
-  margin-bottom: 1rem;
+  background-color: var(--dark-green);
+  height: fit-content;
+  padding: 0.5rem;
+  box-shadow: var(--green-box-shadow);
+  /* margin-bottom: 1rem; */
+  /* padding: 1rem; */
 }
 
 #project-description-text {
   font-size: var(--text-font-size);
-  margin: 1rem;
-  background-color: var(--light-blue);
+  /* margin: 1rem; */
+  /* padding: 1rem; */
+  background-color: var(--dark-green);
 }
 
 .project-tech-area {
@@ -23,6 +27,7 @@
   height: 1.7rem;
   display: flex;
   justify-content: flex-start;
+  margin-top: 1rem;
 }
 
 .project-tech-area ul {

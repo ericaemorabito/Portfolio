@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/header.css";
 import logo from "../icons/logo.png";
-import linkedin from "../icons/link-w.svg";
-import github from "../icons/github-round.svg";
-import resume from "../icons/resume.svg";
+import linkedin from "../icons/linkedin-white.svg";
+import github from "../icons/github-white.svg";
+import resume from "../icons/file-white.svg";
+import email from '../icons/gmail-white.svg';
 import { Row, Col } from "react-bootstrap";
 
 const Header = () => {
@@ -24,6 +25,9 @@ const Header = () => {
                 src={linkedin}
                 alt="github logo"
               ></img>
+            </li>
+            <li>
+              <img className="header-icon" src={email} alt="gmail logo"></img>
             </li>
             <li>
               <img className="header-icon" src={resume} alt="github logo"></img>

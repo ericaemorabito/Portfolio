@@ -21,13 +21,12 @@ const About = () => {
       animate="visible"
       exit="exit"
     >
-      <h1 id="welcome-text">Erica Morabito</h1>
-      <hr></hr>
+      <h1 id="welcome-text">Welcome</h1>
+      <br></br>
+      {/* <hr></hr> */}
       <div className="about-text-area">
         <p id="about-text">
-          I'm a full-stack web developer based in Austin, Texas.
-          <br></br>I’m passionate about using code to solve problems and improve
-          the lives of others.
+          I'm Erica Morabito. I'm full-stack web developer based in Austin, Texas.
         </p>
       </div>
       <div className="tech-logos-area">

@@ -9,54 +9,53 @@ import { motion, AnimatePresence } from "framer-motion";
 const Home = () => {
   const portfolioData = [
     {
-      order: 'first',
-      title: "first title",
-      description: "test description",
+      title: "Solo Traveler",
+      description:
+        "provides solo travelers a place to connect and plan upcoming trips. Hosted on Heroku, please give 20 seconds to spin up.",
       tech1: "JavaScript",
       tech2: "React",
       tech3: "MongoDB",
-      link: "#",
-      github: "#"
+      link: "https://solo.herokuapp.com",
+      github: "https://github.com/ericaemorabito/Solo_Traveler",
     },
     {
-      order: 'second',
-      title: "second title",
-      description: "test description",
+      title: "Restaurant Website",
+      description: "Website recreation of the Colletta Restaurant website.",
       tech1: "JavaScript",
       tech2: "React",
-      tech3: "MongoDB",
-      link: "#",
-      github: "#"
+      tech3: "Bootstrap",
+      link: "https://ericaemorabito.github.io/Restaurant_Website/",
+      github: "https://github.com/ericaemorabito/Restaurant_Website",
     },
     {
-      order: 'third',
-      title: "third title",
-      description: "test description",
+      title: "E-Commerce Webiste",
+      description: "Created using Brad Traversy's MERN tutorial on Udemy ",
       tech1: "JavaScript",
       tech2: "React",
       tech3: "MongoDB",
-      link: "#",
-      github: "#"
+      link: "https://udemyproshoptutorial.herokuapp.com/",
+      github: "https://github.com/ericaemorabito/E-commerce.git",
     },
     {
-      order: 'fourth',
-      title: "fourth title",
-      description: "test description",
+      title: "VS Photography",
+      description:
+        "Website for independent photographer to display work and get bookings",
       tech1: "JavaScript",
       tech2: "React",
-      tech3: "MongoDB",
-      link: "#",
-      github: "#"
+      tech3: "Bootstrap",
+      link: "https://ericaemorabito.github.io/Victoria_Stewart_Photography/",
+      github:
+        "https://github.com/ericaemorabito/Victoria_Stewart_Photography.git",
     },
   ];
 
-  const [home, setHome] = useState(true)
+  const [home, setHome] = useState(true);
   const [project, setProject] = useState(portfolioData[0]);
 
-  const handleHome = () => {
-    setHome(true);
-    console.log(` viewproject : ${project}`);
-  };
+  // const handleHome = () => {
+  //   setHome(true);
+  //   console.log(` viewproject : ${project}`);
+  // };
 
   const handleFirstProject = () => {
     setHome(false);
@@ -99,14 +98,14 @@ const Home = () => {
       <Col lg={12} md={12} sm={12} xs={12} className="main">
         <Row className="body">
           {/* LEFT */}
-          <Col lg={6} md={12} sm={12} xs={12} className="body-col about-col">
+          <Col lg={5} md={5} sm={12} xs={12} className="body-col">
             <AnimatePresence>
               {home && <About />}
-              {home === false && <Project project={project}/>}
+              {home === false && <Project project={project} />}
             </AnimatePresence>
           </Col>
           {/* PROJECTS LISTED */}
-          <Col lg={5} md={6} sm={12} xs={12} className="body-col projects-col">
+          <Col lg={5} md={5} sm={12} xs={12} className="body-col">
             <AnimatePresence>
               {home && (
                 <motion.div
@@ -116,11 +115,9 @@ const Home = () => {
                   exit="exit"
                 >
                   <h2 id="projects-title">Projects</h2>
-                  <hr></hr>
+                  <br></br>
+                  {/* <hr></hr> */}
                   <ul>
-                    <li>
-                      <button onClick={handleHome}>Home Project</button>
-                    </li>
                     <li>
                       <button onClick={handleFirstProject}>
                         First Project
@@ -145,6 +142,18 @@ const Home = () => {
                 </motion.div>
               )}
               {home === false && <Video />}
+              {home === false && (
+                <div className="back-area">
+                  <button
+                    className="back-btn"
+                    onClick={() => {
+                      setHome(true);
+                    }}
+                  >
+                    Back
+                  </button>
+                </div>
+              )}
             </AnimatePresence>
           </Col>
         </Row>

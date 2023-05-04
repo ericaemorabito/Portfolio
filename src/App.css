@@ -2,22 +2,26 @@
   font-family: serif;
   font-family: var(--text-font-family);
   color: var(--text-color);
-  background-color: var(--blue);
+  /* background-color: var(--blue); */
 }
 
 :root {
   --title-font-family: 'Quattrocento', serif;;
   --title-font-size: 4rem;
   --text-font-family: 'Questrial', sans-serif;
-  --text-font-size: 1.1rem;
+  --text-font-size: 1.25rem;
   --text-color: #F8F8F6;
   --blue: #0C236E;
   --light-blue: #3F5086;
+  --dark-green: #124957;
+  --green-box-shadow: 0.75rem 0.75rem 1rem -0.5rem #71b280;
 }
 
 .app {
+  z-index: -2;
   padding-left: 0%;
   padding-right: 0%;
+  background-image: linear-gradient(to right, #134E5E 20%, #71B280);
 }
 
 h1, 

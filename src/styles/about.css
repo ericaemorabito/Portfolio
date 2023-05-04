@@ -11,17 +11,18 @@
 }
 
 .about-text-area {
-  background-color: var(--light-blue);
+  background-color: var(--dark-green);
+  /* border: 1px solid white; */
+  box-shadow: var(--green-box-shadow);
 }
 
 #about-text {
   font-size: var(--text-font-size);
   margin: 1rem;
-  background-color: var(--light-blue);
+  background-color: var(--dark-green);
 }
 
 .tech-logos-area {
-  /* background-color: aqua; */
   height: 2.5rem;
   margin: 1rem;
   display: flex;
