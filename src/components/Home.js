@@ -119,9 +119,11 @@ const Home = () => {
                   {/* <hr></hr> */}
                   <ul>
                     <li>
-                      <button onClick={handleFirstProject}>
-                        First Project
-                      </button>
+                      <span className="underline-magical">
+                        <button onClick={handleFirstProject}>
+                          First Project
+                        </button>
+                      </span>
                     </li>
                     <li>
                       <button onClick={handleSecondProject}>

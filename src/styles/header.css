@@ -13,7 +13,7 @@ header {
 
 .brand-area {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 #brand-logo {
@@ -22,7 +22,7 @@ header {
 
 .icon-area {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .icon-list li {

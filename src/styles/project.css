@@ -46,7 +46,7 @@
   /* background-color: green; */
   height: 1.7rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .project-link {
@@ -62,7 +62,7 @@
   /* background-color: aqua; */
   height: 1rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .back-btn {
