@@ -17,6 +17,7 @@
 #about-text {
   font-size: var(--text-font-size);
   margin: 1rem;
+  background-color: var(--light-blue);
 }
 
 .tech-logos-area {

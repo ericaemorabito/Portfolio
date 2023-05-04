@@ -5,65 +5,11 @@ import github from "../icons/github-w.svg";
 import { motion } from "framer-motion";
 
 const Project = ({ project }) => {
-  const portfolioData = {
-    1: {
-      title: "first title",
-      description: "test description",
-      tech1: "JavaScript",
-      tech2: "React",
-      tech3: "MongoDB",
-      link: "#",
-      github: "#",
-      youtube: "#",
-    },
-    2: {
-      title: "second title",
-      description: "test description",
-      tech1: "JavaScript",
-      tech2: "React",
-      tech3: "MongoDB",
-      link: "#",
-      github: "#",
-      youtube: "#",
-    },
-    3: {
-      title: "third title",
-      description: "test description",
-      tech1: "JavaScript",
-      tech2: "React",
-      tech3: "MongoDB",
-      link: "#",
-      github: "#",
-      youtube: "#",
-    },
-    4: {
-      title: "fourth title",
-      description: "test description",
-      tech1: "JavaScript",
-      tech2: "React",
-      tech3: "MongoDB",
-      link: "#",
-      github: "#",
-      youtube: "#",
-    },
-  };
-
-  let data = null;
-
-  if ((project = "first")) {
-    data = portfolioData[1];
-  } else if (project = "second") {
-    data = portfolioData[2];
-  } else if (project = "third") {
-    data = portfolioData[3];
-  } else if (project = "fourth") {
-    data = portfolioData[4];
-  }
 
   const leftVariants = {
     hidden: { x: 20, opacity: 0 },
-    visible: { x: 1, opacity: 1, transition: { duration: 1, delay: 0.5}},
-    exit: { x: 10, opacity: 0, transition: {duration: 0.5}},
+    visible: { x: 1, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+    exit: { x: 10, opacity: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -74,16 +20,16 @@ const Project = ({ project }) => {
       exit="exit"
       className="project-card"
     >
-      <h2 id="project-title">{data.title}</h2>
+      <h2 id="project-title">{project.title}</h2>
       <div className="project-description-area">
-        <p id="project-description-text">{data.description}</p>
+        <p id="project-description-text">{project.description}</p>
       </div>
       <div className="project-tech-area">
         <ul id="project-tech-list">
           {/* {data.tech.map((tech) => {<li className="project-tech">{tech}</li>})} */}
-          <li className="project-tech">{data.tech1}</li>
-          <li className="project-tech">{data.tech2}</li>
-          <li className="project-tech">{data.tech3}</li>
+          <li className="project-tech">{project.tech1}</li>
+          <li className="project-tech">{project.tech2}</li>
+          <li className="project-tech">{project.tech3}</li>
         </ul>
       </div>
       <div className="project-link-area">
@@ -111,6 +57,9 @@ const Project = ({ project }) => {
             alt="github cat icon"
           ></img>
         </button>
+      </div>
+      <div className="back-area">
+        <button className="back-btn" onClick={() => {console.log('back btn')}}>Back</button>
       </div>
     </motion.div>
   );

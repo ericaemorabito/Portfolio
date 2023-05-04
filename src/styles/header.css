@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-row {
+  background-color: var(--blue);
+  position: relative;
+  width: 80%;
+  top: 1rem;
+}
+
+.brand-area {
+  display: flex;
+  justify-content: start;
+}
+
+#brand-logo {
+  height: 3rem;
+}
+
+.icon-area {
+  display: flex;
+  justify-content: end;
+}
+
+.icon-list li {
+  display: inline;
+  margin: 1rem;
+}
+
+.header-icon {
+  height: 2.2rem;
+}

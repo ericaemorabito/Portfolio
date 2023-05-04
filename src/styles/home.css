@@ -18,7 +18,7 @@
 }
 
 .body {
-  height: 75vh;
+  height: 50vh;
   width: 75rem;
   display: flex;
   align-items: center;
@@ -36,32 +36,11 @@
   border-right: 1px solid white;
 }
 
-/* Welcome and About */
-
-/* #name {
-  font-size: var(--title-font-size);
-  text-align: center;
-}
-
-#about-text {
-  font-size: var(--text-font-size);
-}
-
-.about-col {
-  border-right: 1px solid white;
-} */
-
-/* Projects Listed */
-
 #projects-title {
   font-size: 4rem;
   /* border-bottom: 1px solid white; */
   text-align: center;
 }
-
-/* .projects-col {
-  background-color: aquamarine;
-} */
 
 li {
   font-size: var(--text-font-size);

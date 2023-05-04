@@ -3,52 +3,84 @@ import { Row, Col } from "react-bootstrap";
 import "../styles/home.css";
 import Project from "./Project";
 import About from "./About";
+import Video from "./Video";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
-  // CHANGING THE STATE OF PROJECT
-  const [project, setProject] = useState("home");
+  const portfolioData = [
+    {
+      order: 'first',
+      title: "first title",
+      description: "test description",
+      tech1: "JavaScript",
+      tech2: "React",
+      tech3: "MongoDB",
+      link: "#",
+      github: "#"
+    },
+    {
+      order: 'second',
+      title: "second title",
+      description: "test description",
+      tech1: "JavaScript",
+      tech2: "React",
+      tech3: "MongoDB",
+      link: "#",
+      github: "#"
+    },
+    {
+      order: 'third',
+      title: "third title",
+      description: "test description",
+      tech1: "JavaScript",
+      tech2: "React",
+      tech3: "MongoDB",
+      link: "#",
+      github: "#"
+    },
+    {
+      order: 'fourth',
+      title: "fourth title",
+      description: "test description",
+      tech1: "JavaScript",
+      tech2: "React",
+      tech3: "MongoDB",
+      link: "#",
+      github: "#"
+    },
+  ];
 
-  // const handleHome = () => {
-  //   setProject('home');
-  //   console.log(`state is : ${project}`)
-  // };
+  const [home, setHome] = useState(true)
+  const [project, setProject] = useState(portfolioData[0]);
 
-  // const handleFirstProject = () => {
-  //   setProject("first");
-  //   console.log(`state is : ${project}`);
-  // };
+  const handleHome = () => {
+    setHome(true);
+    console.log(` viewproject : ${project}`);
+  };
 
-  // const handleSecondProject = () => {
-  //   setProject("second");
-  //   console.log(`state is : ${project}`);
-  // };
+  const handleFirstProject = () => {
+    setHome(false);
+    setProject(portfolioData[0]);
+    console.log(`viewproject is : ${project}`);
+  };
 
-  // const handleThirdProject = () => {
-  //   setProject("third");
-  //   console.log(`state is : ${project}`);
-  // };
+  const handleSecondProject = () => {
+    setHome(false);
+    setProject(portfolioData[1]);
+    console.log(`viewproject is : ${project}`);
+  };
 
-  // const handleFourthProject = () => {
-  //   setProject("fourth");
-  //   console.log(`state is : ${project}`);
-  // };
+  const handleThirdProject = () => {
+    setHome(false);
+    setProject(portfolioData[2]);
+    console.log(`viewproject is : ${project}`);
+  };
 
-  // CONDITIONAL RENDERING BASED ON THE STATE
-  // let text;
-
-  // if (project === "home") {
-  //   text = <About />;
-  // }
-  // if (project === "first") {
-  //   text = <Project project="1" />;
-  // }
-  // if (project === "second") {
-  //   text = <Project project="2" />;
-  // }
-  // if (project === "third") {
-  //   text = <Project project="3" />;
-  // }
+  const handleFourthProject = () => {
+    setHome(false);
+    setProject(portfolioData[3]);
+    console.log(`viewproject is : ${project}`);
+  };
 
   const leftVariants = {
     hidden: { x: 100 },
@@ -56,72 +88,64 @@ const Home = () => {
     exit: { x: -100, duration: 1 },
   };
 
+  const rightVariants = {
+    hidden: { x: -20, opacity: 0 },
+    visible: { x: 1, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+    exit: { x: -10, opacity: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <Row fluid className="screen gx-0">
       <Col lg={12} md={12} sm={12} xs={12} className="main">
         <Row className="body">
-          {/* WELCOME & PROJECT TEXT AREA*/}
-          <Col
-            lg={6}
-            md={12}
-            sm={12}
-            xs={12}
-            className="body-col about-col"
-          >
+          {/* LEFT */}
+          <Col lg={6} md={12} sm={12} xs={12} className="body-col about-col">
             <AnimatePresence>
-            {project === "home" && <About />}
-            </AnimatePresence>
-            <AnimatePresence>
-            {project !== "home" && <Project project={project} />}
+              {home && <About />}
+              {home === false && <Project project={project}/>}
             </AnimatePresence>
           </Col>
           {/* PROJECTS LISTED */}
           <Col lg={5} md={6} sm={12} xs={12} className="body-col projects-col">
-            <h2 id="projects-title">Projects</h2>
-            <hr></hr>
-            <ul>
-              <li>
-                <button
-                  onClick={() => {
-                    setProject("home");
-                  }}
+            <AnimatePresence>
+              {home && (
+                <motion.div
+                  variants={rightVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
                 >
-                  Home Project
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    setProject("first");
-                  }}
-                >
-                  First Project
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    setProject("second");
-                  }}
-                >
-                  Second Project
-                </button>
-              </li>
-              <li>
-                <button onClick={() => setProject("third")}>
-                  Third Project
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    setProject("fourth");
-                  }}
-                >
-                  Fourth Project
-                </button>
-              </li>
-            </ul>
+                  <h2 id="projects-title">Projects</h2>
+                  <hr></hr>
+                  <ul>
+                    <li>
+                      <button onClick={handleHome}>Home Project</button>
+                    </li>
+                    <li>
+                      <button onClick={handleFirstProject}>
+                        First Project
+                      </button>
+                    </li>
+                    <li>
+                      <button onClick={handleSecondProject}>
+                        Second Project
+                      </button>
+                    </li>
+                    <li>
+                      <button onClick={handleThirdProject}>
+                        Third Project
+                      </button>
+                    </li>
+                    <li>
+                      <button onClick={handleFourthProject}>
+                        Fourth Project
+                      </button>
+                    </li>
+                  </ul>
+                </motion.div>
+              )}
+              {home === false && <Video />}
+            </AnimatePresence>
           </Col>
         </Row>
       </Col>
